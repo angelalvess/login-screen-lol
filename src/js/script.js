@@ -1,19 +1,19 @@
 const inputs = document.querySelectorAll('.input');
 const loginButton = document.querySelector('.login-button');
 
-handleFocus = ({ target }) => {
+const handleFocus = ({ target }) => {
   const span = target.previousElementSibling;
   span.classList.add('span-active');
 };
 
-handleFocusOut = ({ target }) => {
+const handleFocusOut = ({ target }) => {
   if (target.value === '') {
     const span = target.previousElementSibling;
     span.classList.remove('span-active');
   }
 };
 
-handleChange = () => {
+const handleChange = () => {
   const [username, password] = inputs;
 
   if (username.value && password.value.length >= 8) {
